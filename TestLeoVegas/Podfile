@@ -1,0 +1,16 @@
+platform :ios, '13.0'
+
+target 'TestLeoVegas' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  # use_frameworks!
+
+  # Pods for TestLeoVegas
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
+
+  target 'TestLeoVegasTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
