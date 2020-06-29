@@ -9,13 +9,18 @@
 /* Begin PBXBuildFile section */
 		75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791824AA43520071B1C0 /* AppDelegate.swift */; };
 		75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791A24AA43520071B1C0 /* SceneDelegate.swift */; };
-		75BF791D24AA43520071B1C0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791C24AA43520071B1C0 /* ViewController.swift */; };
-		75BF792024AA43520071B1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BF791E24AA43520071B1C0 /* Main.storyboard */; };
 		75BF792224AA43530071B1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75BF792124AA43530071B1C0 /* Assets.xcassets */; };
 		75BF792524AA43530071B1C0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */; };
 		75BF793024AA43530071B1C0 /* TestLeoVegasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF792F24AA43530071B1C0 /* TestLeoVegasTests.swift */; };
 		75BF793B24AA45950071B1C0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 75BF793A24AA45950071B1C0 /* GoogleService-Info.plist */; };
 		75BF793D24AA47570071B1C0 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 75BF793C24AA47570071B1C0 /* Podfile */; };
+		75BF794524AA5E620071B1C0 /* Coordinating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF794424AA5E620071B1C0 /* Coordinating.swift */; };
+		75BF794724AA5E8A0071B1C0 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF794624AA5E8A0071B1C0 /* AppCoordinator.swift */; };
+		75BF794D24AA5F090071B1C0 /* CalculatorMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF794B24AA5F090071B1C0 /* CalculatorMainViewController.swift */; };
+		75BF794E24AA5F090071B1C0 /* CalculatorMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 75BF794C24AA5F090071B1C0 /* CalculatorMainViewController.xib */; };
+		75BF795024AA5F4A0071B1C0 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF794F24AA5F4A0071B1C0 /* CalculatorCoordinator.swift */; };
+		75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF795224AA5F690071B1C0 /* ViewModuleFactory.swift */; };
+		75BF795524AA62BB0071B1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BF795424AA62BB0071B1C0 /* Main.storyboard */; };
 		D21D947570BB933BBF46DDD2 /* libPods-TestLeoVegasTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAA337D68BA830DC8CA279B /* libPods-TestLeoVegasTests.a */; };
 		E377508E9EF223C799494224 /* libPods-TestLeoVegas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3504D10232D2140AE502AB /* libPods-TestLeoVegas.a */; };
 /* End PBXBuildFile section */
@@ -37,8 +42,6 @@
 		75BF791524AA43520071B1C0 /* TestLeoVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeoVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF791824AA43520071B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		75BF791A24AA43520071B1C0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		75BF791C24AA43520071B1C0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		75BF791F24AA43520071B1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		75BF792124AA43530071B1C0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		75BF792424AA43530071B1C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		75BF792624AA43530071B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +50,13 @@
 		75BF793124AA43530071B1C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		75BF793A24AA45950071B1C0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		75BF793C24AA47570071B1C0 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		75BF794424AA5E620071B1C0 /* Coordinating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Coordinating.swift; sourceTree = "<group>"; };
+		75BF794624AA5E8A0071B1C0 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		75BF794B24AA5F090071B1C0 /* CalculatorMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewController.swift; sourceTree = "<group>"; };
+		75BF794C24AA5F090071B1C0 /* CalculatorMainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculatorMainViewController.xib; sourceTree = "<group>"; };
+		75BF794F24AA5F4A0071B1C0 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
+		75BF795224AA5F690071B1C0 /* ViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModuleFactory.swift; sourceTree = "<group>"; };
+		75BF795424AA62BB0071B1C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		7CAA337D68BA830DC8CA279B /* libPods-TestLeoVegasTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLeoVegasTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A215BD1049022C6391FEFD9A /* Pods-TestLeoVegas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.debug.xcconfig"; sourceTree = "<group>"; };
 		F2C9895F37AF03456145CE15 /* Pods-TestLeoVegasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,9 +117,8 @@
 			children = (
 				75BF794024AA5C030071B1C0 /* Resources */,
 				75BF793F24AA5BFB0071B1C0 /* Source */,
-				75BF791C24AA43520071B1C0 /* ViewController.swift */,
-				75BF791E24AA43520071B1C0 /* Main.storyboard */,
 				75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */,
+				75BF795424AA62BB0071B1C0 /* Main.storyboard */,
 				75BF792624AA43530071B1C0 /* Info.plist */,
 				75BF793A24AA45950071B1C0 /* GoogleService-Info.plist */,
 			);
@@ -128,6 +137,9 @@
 		75BF793F24AA5BFB0071B1C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				75BF795124AA5F5D0071B1C0 /* Factories */,
+				75BF794824AA5ED60071B1C0 /* ViewModules */,
+				75BF794324AA5E450071B1C0 /* Protocols */,
 				75BF794224AA5C370071B1C0 /* AppAndSceneDelegate */,
 			);
 			path = Source;
@@ -144,10 +156,53 @@
 		75BF794224AA5C370071B1C0 /* AppAndSceneDelegate */ = {
 			isa = PBXGroup;
 			children = (
+				75BF794624AA5E8A0071B1C0 /* AppCoordinator.swift */,
 				75BF791824AA43520071B1C0 /* AppDelegate.swift */,
 				75BF791A24AA43520071B1C0 /* SceneDelegate.swift */,
 			);
 			path = AppAndSceneDelegate;
+			sourceTree = "<group>";
+		};
+		75BF794324AA5E450071B1C0 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				75BF794424AA5E620071B1C0 /* Coordinating.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		75BF794824AA5ED60071B1C0 /* ViewModules */ = {
+			isa = PBXGroup;
+			children = (
+				75BF794924AA5EE60071B1C0 /* Calculator */,
+			);
+			path = ViewModules;
+			sourceTree = "<group>";
+		};
+		75BF794924AA5EE60071B1C0 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				75BF794F24AA5F4A0071B1C0 /* CalculatorCoordinator.swift */,
+				75BF794A24AA5EF00071B1C0 /* MainView */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		75BF794A24AA5EF00071B1C0 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				75BF794B24AA5F090071B1C0 /* CalculatorMainViewController.swift */,
+				75BF794C24AA5F090071B1C0 /* CalculatorMainViewController.xib */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		75BF795124AA5F5D0071B1C0 /* Factories */ = {
+			isa = PBXGroup;
+			children = (
+				75BF795224AA5F690071B1C0 /* ViewModuleFactory.swift */,
+			);
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		8710FC8BCB5174951CD97BF0 /* Pods */ = {
@@ -248,8 +303,9 @@
 				75BF793D24AA47570071B1C0 /* Podfile in Resources */,
 				75BF792524AA43530071B1C0 /* LaunchScreen.storyboard in Resources */,
 				75BF793B24AA45950071B1C0 /* GoogleService-Info.plist in Resources */,
+				75BF795524AA62BB0071B1C0 /* Main.storyboard in Resources */,
 				75BF792224AA43530071B1C0 /* Assets.xcassets in Resources */,
-				75BF792024AA43520071B1C0 /* Main.storyboard in Resources */,
+				75BF794E24AA5F090071B1C0 /* CalculatorMainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,9 +388,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				75BF791D24AA43520071B1C0 /* ViewController.swift in Sources */,
+				75BF795024AA5F4A0071B1C0 /* CalculatorCoordinator.swift in Sources */,
 				75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */,
+				75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */,
+				75BF794724AA5E8A0071B1C0 /* AppCoordinator.swift in Sources */,
+				75BF794524AA5E620071B1C0 /* Coordinating.swift in Sources */,
 				75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */,
+				75BF794D24AA5F090071B1C0 /* CalculatorMainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,14 +417,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		75BF791E24AA43520071B1C0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				75BF791F24AA43520071B1C0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
