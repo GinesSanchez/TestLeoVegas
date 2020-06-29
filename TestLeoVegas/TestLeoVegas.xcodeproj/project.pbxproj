@@ -105,11 +105,10 @@
 		75BF791724AA43520071B1C0 /* TestLeoVegas */ = {
 			isa = PBXGroup;
 			children = (
-				75BF791824AA43520071B1C0 /* AppDelegate.swift */,
-				75BF791A24AA43520071B1C0 /* SceneDelegate.swift */,
+				75BF794024AA5C030071B1C0 /* Resources */,
+				75BF793F24AA5BFB0071B1C0 /* Source */,
 				75BF791C24AA43520071B1C0 /* ViewController.swift */,
 				75BF791E24AA43520071B1C0 /* Main.storyboard */,
-				75BF792124AA43530071B1C0 /* Assets.xcassets */,
 				75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */,
 				75BF792624AA43530071B1C0 /* Info.plist */,
 				75BF793A24AA45950071B1C0 /* GoogleService-Info.plist */,
@@ -124,6 +123,31 @@
 				75BF793124AA43530071B1C0 /* Info.plist */,
 			);
 			path = TestLeoVegasTests;
+			sourceTree = "<group>";
+		};
+		75BF793F24AA5BFB0071B1C0 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				75BF794224AA5C370071B1C0 /* AppAndSceneDelegate */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		75BF794024AA5C030071B1C0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				75BF792124AA43530071B1C0 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		75BF794224AA5C370071B1C0 /* AppAndSceneDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				75BF791824AA43520071B1C0 /* AppDelegate.swift */,
+				75BF791A24AA43520071B1C0 /* SceneDelegate.swift */,
+			);
+			path = AppAndSceneDelegate;
 			sourceTree = "<group>";
 		};
 		8710FC8BCB5174951CD97BF0 /* Pods */ = {
