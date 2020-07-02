@@ -21,6 +21,7 @@ protocol CalculatorManagerType {
     init(firebaseDataBase: Firestore)
 
     func getBitcoinValueFor(dollarValue: Double, completion: @escaping (Result<Double, CalculatorManagerError>) -> Void)
+    func getLocationInfoFrom(latitude: Double, longitude: Double, completion: @escaping (Result<String, CalculatorManagerError>) -> Void)
 }
 
 final class CalculatorManager: CalculatorManagerType {
@@ -48,6 +49,26 @@ final class CalculatorManager: CalculatorManagerType {
             }
 
             completion(.success(dollarValue * bitcoinValue))
+        }
+    }
+
+    func getLocationInfoFrom(latitude: Double, longitude: Double, completion: @escaping (Result<String, CalculatorManagerError>) -> Void) {
+        let docRef = firebaseDataBase.collection("localizations").document("description")
+
+        docRef.getDocument { (document, error) in
+            guard error == nil else {
+                return completion(.failure(.responseError))
+            }
+
+            guard let document = document, document.exists, let dictionary = document.data() else {
+                return completion(.failure(.noResponseData))
+            }
+
+            guard let localizationInfo = dictionary["value"] as? String else {
+                return completion(.failure(.invalidJson))
+            }
+
+            completion(.success(localizationInfo))
         }
     }
 }

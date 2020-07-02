@@ -156,6 +156,8 @@ private extension CalculatorMainViewController {
             self.subtractButton.isSelected = isSelected
         case .add:
             self.addButton.isSelected = isSelected
+        case .mapLocation:
+            self.mapButton.isSelected = isSelected
         default:
             break
         }

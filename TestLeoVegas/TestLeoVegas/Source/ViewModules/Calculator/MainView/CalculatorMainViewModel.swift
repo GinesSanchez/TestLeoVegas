@@ -204,7 +204,7 @@ private extension CalculatorMainViewModel {
                         self.currentScreenText = "Error"    //TODO: Localize
                         return
                     }
-                    calculatorManager.getBitcoinValueFor(dollarValue: dolarDouble) { [weak self] (result) in
+                calculatorManager.getBitcoinValueFor(dollarValue: dolarDouble) { [weak self] (result) in
                         guard let self = self else { return }
                         switch result {
                         case .failure:
@@ -216,9 +216,6 @@ private extension CalculatorMainViewModel {
                             self.currentScreenText = self.formartResult(self.firstOperator)
                         }
                     }
-                    break
-                case .mapLocation:
-                    //TODO: Add special operation completed state
                     break
                 case .sin:
                     guard let currentFloatValue = Double(currentScreenText) else {
@@ -259,6 +256,23 @@ private extension CalculatorMainViewModel {
                 }
                 self.firstOperator = firstOperator / secondOperator
                 currentScreenText = formartResult(self.firstOperator)
+            case .mapLocation:
+
+            calculatorManager.getLocationInfoFrom(latitude: firstOperator, longitude: secondOperator) { [weak self] (result) in
+                    guard let self = self else { return }
+                    switch result {
+                    case .failure:
+                        //TODO: Show error message on an alert view
+                        self.currentScreenText = "Error"    //TODO: Localize
+                        break
+                    case .success(let locationInfo):
+                        self.currentScreenText = locationInfo
+                        self.firstOperator = 0
+                        self.secondOperator = 0
+                    }
+                }
+                //TODO: Add special operation completed state
+                break
             default:
                 break
             }
@@ -267,7 +281,6 @@ private extension CalculatorMainViewModel {
 
     func isUniryOperation(_ operation: Operation) -> Bool {
         return operation == .bitCoinToDollar
-            || operation == .mapLocation
             || operation == .sin
             || operation == .cos
     }
