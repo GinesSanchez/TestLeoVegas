@@ -200,7 +200,22 @@ private extension CalculatorMainViewModel {
         if isUniryOperation(currentOperation) {
             switch currentOperation {
                 case .bitCoinToDollar:
-                    //TODO:
+                    guard let dolarDouble = Double(currentScreenText) else {
+                        self.currentScreenText = "Error"    //TODO: Localize
+                        return
+                    }
+                    calculatorManager.getBitcoinValueFor(dollarValue: dolarDouble) { [weak self] (result) in
+                        guard let self = self else { return }
+                        switch result {
+                        case .failure:
+                            //TODO: Show error message on an alert view
+                            self.currentScreenText = "Error"    //TODO: Localize
+                            break
+                        case .success(let bitcoinValue):
+                            self.firstOperator = bitcoinValue
+                            self.currentScreenText = self.formartResult(self.firstOperator)
+                        }
+                    }
                     break
                 case .mapLocation:
                     //TODO: Add special operation completed state

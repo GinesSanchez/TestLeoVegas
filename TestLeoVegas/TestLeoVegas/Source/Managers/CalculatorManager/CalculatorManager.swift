@@ -9,11 +9,18 @@
 import Foundation
 import Firebase
 
+enum CalculatorManagerError: Error {
+    case responseError
+    case noResponseData
+    case invalidJson
+    case unknown
+}
+
 protocol CalculatorManagerType {
     var firebaseDataBase: Firestore { get }
     init(firebaseDataBase: Firestore)
 
-    //TODO: Add endpoint calls declaration
+    func getBitcoinValueFor(dollarValue: Double, completion: @escaping (Result<Double, CalculatorManagerError>) -> Void)
 }
 
 final class CalculatorManager: CalculatorManagerType {
@@ -24,5 +31,23 @@ final class CalculatorManager: CalculatorManagerType {
         return
     }
 
-    //TODO: Add endpoint calls implementation
+    func getBitcoinValueFor(dollarValue: Double, completion: @escaping (Result<Double, CalculatorManagerError>) -> Void) {
+        let docRef = firebaseDataBase.collection("bitcoinValues").document("Values")
+
+        docRef.getDocument { (document, error) in
+            guard error == nil else {
+                return completion(.failure(.responseError))
+            }
+
+            guard let document = document, document.exists, let dictionary = document.data() else {
+                return completion(.failure(.noResponseData))
+            }
+
+            guard let bitcoinValue = dictionary["value"] as? Double else {
+                return completion(.failure(.invalidJson))
+            }
+
+            completion(.success(dollarValue * bitcoinValue))
+        }
+    }
 }
