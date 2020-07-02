@@ -1,5 +1,7 @@
 platform :ios, '13.0'
 
+use_modular_headers!
+
 target 'TestLeoVegas' do
   # Comment the next line if you don't want to use dynamic frameworks
   # use_frameworks!
@@ -7,6 +9,9 @@ target 'TestLeoVegas' do
   # Pods for TestLeoVegas
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Firebase/Core'
+  pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
 
   target 'TestLeoVegasTests' do
     inherit! :search_paths
