@@ -15,7 +15,8 @@ protocol ViewModuleFactoryType {
 final class ViewModuleFactory: ViewModuleFactoryType {
     func createCalculatorMainViewModule() -> CalculatorMainViewController {
         let viewController: CalculatorMainViewController = CalculatorMainViewController(nibName: "CalculatorMainViewController", bundle: nil)
-        //TODO: Add view model
+        let viewModel: CalculatorMainViewModel = CalculatorMainViewModel(delegate: viewController)
+        viewController.viewModel = viewModel
         return viewController
     }
 }

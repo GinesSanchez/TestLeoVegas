@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
 		753D42CB24AB56A10046FA9F /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D42CA24AB56A10046FA9F /* CalculatorButton.swift */; };
 		75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791824AA43520071B1C0 /* AppDelegate.swift */; };
 		75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791A24AA43520071B1C0 /* SceneDelegate.swift */; };
@@ -40,6 +41,7 @@
 		0F30168700F97174E20C7285 /* Pods-TestLeoVegas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.release.xcconfig"; sourceTree = "<group>"; };
 		5B01D48A3B096F7FA7FD31BD /* Pods-TestLeoVegasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C3504D10232D2140AE502AB /* libPods-TestLeoVegas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLeoVegas.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
 		753D42CA24AB56A10046FA9F /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		75BF791524AA43520071B1C0 /* TestLeoVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeoVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF791824AA43520071B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -195,6 +197,7 @@
 			children = (
 				753D42CA24AB56A10046FA9F /* CalculatorButton.swift */,
 				75BF794B24AA5F090071B1C0 /* CalculatorMainViewController.swift */,
+				751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */,
 				75BF794C24AA5F090071B1C0 /* CalculatorMainViewController.xib */,
 			);
 			path = MainView;
@@ -398,6 +401,7 @@
 				75BF794524AA5E620071B1C0 /* Coordinating.swift in Sources */,
 				75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */,
 				75BF794D24AA5F090071B1C0 /* CalculatorMainViewController.swift in Sources */,
+				751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */,
 				753D42CB24AB56A10046FA9F /* CalculatorButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -552,6 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestLeoVegas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -571,6 +576,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = TestLeoVegas/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

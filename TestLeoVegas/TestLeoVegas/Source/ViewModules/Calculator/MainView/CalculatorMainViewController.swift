@@ -8,6 +8,15 @@
 
 import UIKit
 
+protocol CalculatorMainViewControllerDelegate: class {
+    func viewDidLoad()
+    func didTapOperation(_ operation: Operation)
+    func didTapEqual()
+    func didTapNumber(_ number: Int)
+    func didTapDecimal()
+    func didTapAllClear()
+}
+
 final class CalculatorMainViewController: UIViewController {
 
     //Actions
@@ -38,9 +47,13 @@ final class CalculatorMainViewController: UIViewController {
     //Labels
     @IBOutlet weak var screenLabel: UILabel!
 
+    //Delegates
+    var viewModel: CalculatorMainViewControllerDelegate?
+
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
+        viewModel?.viewDidLoad()
     }
 }
 
@@ -62,47 +75,89 @@ private extension CalculatorMainViewController {
     }
 
     func labelsSetup() {
-        //TODO: Add color set up
-        screenLabel.text = "4"
+        //TODO: Add color set up        
     }
 }
 
 // MARK: IBActions
 extension CalculatorMainViewController {
+    @IBAction func allClearButtonTapped(_ sender: Any) {
+        viewModel?.didTapAllClear()
+    }
+
     @IBAction func bitcoinToDollarButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.bitCoinToDollar)
     }
 
     @IBAction func mapButtonTapped(_ sender: Any) {
-    }
-
-
-    @IBAction func allClearButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.mapLocation)
     }
 
     @IBAction func sinButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.sin)
     }
 
     @IBAction func cosButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.cos)
     }
 
     @IBAction func divideButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.divide)
     }
 
     @IBAction func multiplyButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.multiply)
     }
 
     @IBAction func subtractButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.subtract)
     }
 
     @IBAction func addButtonTapped(_ sender: Any) {
+        viewModel?.didTapOperation(.add)
     }
 
     @IBAction func equalButtonTapped(_ sender: Any) {
+        viewModel?.didTapEqual()
     }
 
     @IBAction func decimalButtonTapped(_ sender: Any) {
+        viewModel?.didTapDecimal()
     }
 
-    @IBAction func numberButtonTapped(_ sender: UIButton) {        
+    @IBAction func numberButtonTapped(_ sender: UIButton) {
+        viewModel?.didTapNumber(sender.tag)
+    }
+}
+
+extension CalculatorMainViewController: CalculatorMainViewModelDelegate {
+    func viewModel(_ viewModel: CalculatorMainViewModelType, updateScreenText text: String, operation: Operation) {
+        self.screenLabel.text = text
+    }
+
+    func viewModel(_ viewModel: CalculatorMainViewModelType, setSelectedButtonStateForOperation operation: Operation) {
+        setButton(isSelected: true, operation: operation)
+    }
+
+    func viewModel(_ viewModel: CalculatorMainViewModelType, setDefaultButtonStateForOperation operation: Operation) {
+        setButton(isSelected: false, operation: operation)
+    }
+}
+
+// MARK: Helper functions
+private extension CalculatorMainViewController {
+    func setButton(isSelected: Bool, operation: Operation) {
+        switch operation {
+        case .divide:
+            self.divideButton.isSelected = isSelected
+        case .multiply:
+            self.multiplyButton.isSelected = isSelected
+        case .subtract:
+            self.subtractButton.isSelected = isSelected
+        case .add:
+            self.addButton.isSelected = isSelected
+        default:
+            break
+        }
     }
 }
