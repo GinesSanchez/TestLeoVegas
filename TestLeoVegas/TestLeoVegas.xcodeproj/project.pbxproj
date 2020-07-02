@@ -3,12 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		55246A63B946FE00613B9ED8 /* Pods_TestLeoVegasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F0AFC44F264B7C8C5367B2 /* Pods_TestLeoVegasTests.framework */; };
 		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
+		7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520552B24AE249200A3983F /* CalculatorManager.swift */; };
 		753D42CB24AB56A10046FA9F /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D42CA24AB56A10046FA9F /* CalculatorButton.swift */; };
+		7598D2927F32D5307B8C75B7 /* Pods_TestLeoVegas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB95EA2CCA7D1F7442247FD3 /* Pods_TestLeoVegas.framework */; };
 		75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791824AA43520071B1C0 /* AppDelegate.swift */; };
 		75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791A24AA43520071B1C0 /* SceneDelegate.swift */; };
 		75BF792224AA43530071B1C0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 75BF792124AA43530071B1C0 /* Assets.xcassets */; };
@@ -23,8 +26,6 @@
 		75BF795024AA5F4A0071B1C0 /* CalculatorCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF794F24AA5F4A0071B1C0 /* CalculatorCoordinator.swift */; };
 		75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF795224AA5F690071B1C0 /* ViewModuleFactory.swift */; };
 		75BF795524AA62BB0071B1C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 75BF795424AA62BB0071B1C0 /* Main.storyboard */; };
-		D21D947570BB933BBF46DDD2 /* libPods-TestLeoVegasTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CAA337D68BA830DC8CA279B /* libPods-TestLeoVegasTests.a */; };
-		E377508E9EF223C799494224 /* libPods-TestLeoVegas.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C3504D10232D2140AE502AB /* libPods-TestLeoVegas.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,10 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0F30168700F97174E20C7285 /* Pods-TestLeoVegas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.release.xcconfig"; sourceTree = "<group>"; };
-		5B01D48A3B096F7FA7FD31BD /* Pods-TestLeoVegasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C3504D10232D2140AE502AB /* libPods-TestLeoVegas.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLeoVegas.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B00787DF84212B4B8CAADED /* Pods-TestLeoVegasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.release.xcconfig"; sourceTree = "<group>"; };
+		29873AF3A2E87BA9C0DA8206 /* Pods-TestLeoVegas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.release.xcconfig"; sourceTree = "<group>"; };
 		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
+		7520552B24AE249200A3983F /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
 		753D42CA24AB56A10046FA9F /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		75BF791524AA43520071B1C0 /* TestLeoVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeoVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF791824AA43520071B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,9 +62,10 @@
 		75BF794F24AA5F4A0071B1C0 /* CalculatorCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorCoordinator.swift; sourceTree = "<group>"; };
 		75BF795224AA5F690071B1C0 /* ViewModuleFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModuleFactory.swift; sourceTree = "<group>"; };
 		75BF795424AA62BB0071B1C0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		7CAA337D68BA830DC8CA279B /* libPods-TestLeoVegasTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-TestLeoVegasTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A215BD1049022C6391FEFD9A /* Pods-TestLeoVegas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.debug.xcconfig"; sourceTree = "<group>"; };
-		F2C9895F37AF03456145CE15 /* Pods-TestLeoVegasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.release.xcconfig"; sourceTree = "<group>"; };
+		B86CAAD912305544ED8ABF17 /* Pods-TestLeoVegasTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.debug.xcconfig"; sourceTree = "<group>"; };
+		D3F0AFC44F264B7C8C5367B2 /* Pods_TestLeoVegasTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestLeoVegasTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D485B750C84AA44CD2299939 /* Pods-TestLeoVegas.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.debug.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.debug.xcconfig"; sourceTree = "<group>"; };
+		EB95EA2CCA7D1F7442247FD3 /* Pods_TestLeoVegas.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TestLeoVegas.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +73,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E377508E9EF223C799494224 /* libPods-TestLeoVegas.a in Frameworks */,
+				7598D2927F32D5307B8C75B7 /* Pods_TestLeoVegas.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,20 +81,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D21D947570BB933BBF46DDD2 /* libPods-TestLeoVegasTests.a in Frameworks */,
+				55246A63B946FE00613B9ED8 /* Pods_TestLeoVegasTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5A042EC0DBF0AFB2760D4AB5 /* Frameworks */ = {
+		7520552924AE247300A3983F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				5C3504D10232D2140AE502AB /* libPods-TestLeoVegas.a */,
-				7CAA337D68BA830DC8CA279B /* libPods-TestLeoVegasTests.a */,
+				7520552A24AE248000A3983F /* CalculatorManager */,
 			);
-			name = Frameworks;
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7520552A24AE248000A3983F /* CalculatorManager */ = {
+			isa = PBXGroup;
+			children = (
+				7520552B24AE249200A3983F /* CalculatorManager.swift */,
+			);
+			path = CalculatorManager;
 			sourceTree = "<group>";
 		};
 		75BF790C24AA43520071B1C0 = {
@@ -103,7 +112,7 @@
 				75BF792E24AA43530071B1C0 /* TestLeoVegasTests */,
 				75BF791624AA43520071B1C0 /* Products */,
 				8710FC8BCB5174951CD97BF0 /* Pods */,
-				5A042EC0DBF0AFB2760D4AB5 /* Frameworks */,
+				F19C4DD19F1852D13B1F288C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -141,6 +150,7 @@
 		75BF793F24AA5BFB0071B1C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				7520552924AE247300A3983F /* Managers */,
 				75BF795124AA5F5D0071B1C0 /* Factories */,
 				75BF794824AA5ED60071B1C0 /* ViewModules */,
 				75BF794324AA5E450071B1C0 /* Protocols */,
@@ -214,12 +224,21 @@
 		8710FC8BCB5174951CD97BF0 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				A215BD1049022C6391FEFD9A /* Pods-TestLeoVegas.debug.xcconfig */,
-				0F30168700F97174E20C7285 /* Pods-TestLeoVegas.release.xcconfig */,
-				5B01D48A3B096F7FA7FD31BD /* Pods-TestLeoVegasTests.debug.xcconfig */,
-				F2C9895F37AF03456145CE15 /* Pods-TestLeoVegasTests.release.xcconfig */,
+				D485B750C84AA44CD2299939 /* Pods-TestLeoVegas.debug.xcconfig */,
+				29873AF3A2E87BA9C0DA8206 /* Pods-TestLeoVegas.release.xcconfig */,
+				B86CAAD912305544ED8ABF17 /* Pods-TestLeoVegasTests.debug.xcconfig */,
+				1B00787DF84212B4B8CAADED /* Pods-TestLeoVegasTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F19C4DD19F1852D13B1F288C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB95EA2CCA7D1F7442247FD3 /* Pods_TestLeoVegas.framework */,
+				D3F0AFC44F264B7C8C5367B2 /* Pods_TestLeoVegasTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,12 +248,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75BF793424AA43530071B1C0 /* Build configuration list for PBXNativeTarget "TestLeoVegas" */;
 			buildPhases = (
-				D2C4A87A138365D3E63BC014 /* [CP] Check Pods Manifest.lock */,
+				F8E95608DD35484EBBB09FA1 /* [CP] Check Pods Manifest.lock */,
 				75BF791124AA43520071B1C0 /* Sources */,
 				75BF791224AA43520071B1C0 /* Frameworks */,
 				75BF791324AA43520071B1C0 /* Resources */,
 				75BF793E24AA4BCF0071B1C0 /* ShellScript */,
-				ED07EA45AB49BF4881A3EE9C /* [CP] Copy Pods Resources */,
+				8DFB173710A0B90C3E06C1CD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,7 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 75BF793724AA43530071B1C0 /* Build configuration list for PBXNativeTarget "TestLeoVegasTests" */;
 			buildPhases = (
-				979D9FDD409071F31D5D3D26 /* [CP] Check Pods Manifest.lock */,
+				F633326FF6DF347814CB0D0A /* [CP] Check Pods Manifest.lock */,
 				75BF792724AA43530071B1C0 /* Sources */,
 				75BF792824AA43530071B1C0 /* Frameworks */,
 				75BF792924AA43530071B1C0 /* Resources */,
@@ -344,7 +363,24 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
-		979D9FDD409071F31D5D3D26 /* [CP] Check Pods Manifest.lock */ = {
+		8DFB173710A0B90C3E06C1CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F633326FF6DF347814CB0D0A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -366,7 +402,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		D2C4A87A138365D3E63BC014 /* [CP] Check Pods Manifest.lock */ = {
+		F8E95608DD35484EBBB09FA1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -388,23 +424,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		ED07EA45AB49BF4881A3EE9C /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-resources-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-resources-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -419,6 +438,7 @@
 				75BF794524AA5E620071B1C0 /* Coordinating.swift in Sources */,
 				75BF791B24AA43520071B1C0 /* SceneDelegate.swift in Sources */,
 				75BF794D24AA5F090071B1C0 /* CalculatorMainViewController.swift in Sources */,
+				7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */,
 				751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */,
 				753D42CB24AB56A10046FA9F /* CalculatorButton.swift in Sources */,
 			);
@@ -570,7 +590,7 @@
 		};
 		75BF793524AA43530071B1C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A215BD1049022C6391FEFD9A /* Pods-TestLeoVegas.debug.xcconfig */;
+			baseConfigurationReference = D485B750C84AA44CD2299939 /* Pods-TestLeoVegas.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -590,7 +610,7 @@
 		};
 		75BF793624AA43530071B1C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0F30168700F97174E20C7285 /* Pods-TestLeoVegas.release.xcconfig */;
+			baseConfigurationReference = 29873AF3A2E87BA9C0DA8206 /* Pods-TestLeoVegas.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -610,7 +630,7 @@
 		};
 		75BF793824AA43530071B1C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B01D48A3B096F7FA7FD31BD /* Pods-TestLeoVegasTests.debug.xcconfig */;
+			baseConfigurationReference = B86CAAD912305544ED8ABF17 /* Pods-TestLeoVegasTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -632,7 +652,7 @@
 		};
 		75BF793924AA43530071B1C0 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F2C9895F37AF03456145CE15 /* Pods-TestLeoVegasTests.release.xcconfig */;
+			baseConfigurationReference = 1B00787DF84212B4B8CAADED /* Pods-TestLeoVegasTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

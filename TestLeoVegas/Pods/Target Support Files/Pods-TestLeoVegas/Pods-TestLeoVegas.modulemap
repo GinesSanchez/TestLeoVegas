@@ -1,4 +1,4 @@
-module Pods_TestLeoVegas {
+framework module Pods_TestLeoVegas {
   umbrella header "Pods-TestLeoVegas-umbrella.h"
 
   export *
