@@ -48,11 +48,13 @@ protocol CalculatorMainViewModelDelegate: class {
 
 protocol CalculatorMainViewModelType {
     var delegate: CalculatorMainViewModelDelegate? { get }
-    init(delegate: CalculatorMainViewModelDelegate)
+    var calculatorManager: CalculatorManagerType { get }
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType)
 }
 
 final class CalculatorMainViewModel: CalculatorMainViewModelType {
     weak var delegate: CalculatorMainViewModelDelegate?
+    internal let calculatorManager: CalculatorManagerType
 
     private var firstOperator: Double?
     private var secondOperator: Double?
@@ -72,8 +74,9 @@ final class CalculatorMainViewModel: CalculatorMainViewModelType {
         }
     }
 
-    init(delegate: CalculatorMainViewModelDelegate) {
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType) {
         self.delegate = delegate
+        self.calculatorManager = calculatorManager
 
         self.state = .initialized
         self.event = .none

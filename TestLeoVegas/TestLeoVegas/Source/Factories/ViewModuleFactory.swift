@@ -7,15 +7,17 @@
 //
 
 import Foundation
+import Firebase
 
 protocol ViewModuleFactoryType {
-    func createCalculatorMainViewModule() -> CalculatorMainViewController
+    func createCalculatorMainViewModule(firebaseDataBase: Firestore) -> CalculatorMainViewController
 }
 
 final class ViewModuleFactory: ViewModuleFactoryType {
-    func createCalculatorMainViewModule() -> CalculatorMainViewController {
+    func createCalculatorMainViewModule(firebaseDataBase: Firestore) -> CalculatorMainViewController {
         let viewController: CalculatorMainViewController = CalculatorMainViewController(nibName: "CalculatorMainViewController", bundle: nil)
-        let viewModel: CalculatorMainViewModel = CalculatorMainViewModel(delegate: viewController)
+        let viewModel: CalculatorMainViewModel = CalculatorMainViewModel(delegate: viewController,
+                                                                         calculatorManager: CalculatorManager(firebaseDataBase: firebaseDataBase))
         viewController.viewModel = viewModel
         return viewController
     }

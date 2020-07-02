@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -15,8 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {        
         guard let _ = (scene as? UIWindowScene) else { return }
+        configureFirebase()
+
         self.appCoodinator = AppCoordinator.init(navigationController: UINavigationController(),
-                                                 viewModuleFactory: ViewModuleFactory())
+                                                 viewModuleFactory: ViewModuleFactory(),
+                                                 firebaseDataBase: Firestore.firestore())
         window?.rootViewController = self.appCoodinator?.navigationController
         self.appCoodinator?.start()
         window?.makeKeyAndVisible()
@@ -53,3 +57,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 }
 
+
+private extension SceneDelegate {
+    func configureFirebase() {
+        FirebaseApp.configure()
+
+        //TODO: Check it. It doesn't work!
+        let title = "configureFrameworks-called"
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterItemID: "id-\(title)",
+            AnalyticsParameterItemName: title,
+            AnalyticsParameterContentType: "cont"
+        ])
+    }
+}

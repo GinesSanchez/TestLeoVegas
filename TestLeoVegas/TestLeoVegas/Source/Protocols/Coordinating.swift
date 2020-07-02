@@ -7,14 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 protocol Coordinating: class {
     //Properties
     var navigationController: UINavigationController { get }
     var viewModuleFactory: ViewModuleFactoryType { get }
+    var firebaseDataBase: Firestore { get }
 
     //Functions
-    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType)
+    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType, firebaseDataBase: Firestore)
     func start()
     func stop()
 }

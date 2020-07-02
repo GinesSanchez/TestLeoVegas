@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,10 +15,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-
-        //TODO: Move to App Coordinator
-        configureFrameworks()
-
         return true
     }
 
@@ -38,18 +33,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
-}
-
-private extension AppDelegate {
-    func configureFrameworks() {
-        FirebaseApp.configure()
-
-        //TODO: Remove
-        let title = "configureFrameworks-called"
-        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
-            AnalyticsParameterItemID: "id-\(title)",
-            AnalyticsParameterItemName: title,
-            AnalyticsParameterContentType: "cont"
-        ])
-    }
 }

@@ -7,23 +7,26 @@
 //
 
 import UIKit
+import Firebase
 
 protocol CalculatorCoordinatorType: Coordinating { }
 
 final class CalculatorCoordinator: CalculatorCoordinatorType {
 
-    var navigationController: UINavigationController
+    let navigationController: UINavigationController
     let viewModuleFactory: ViewModuleFactoryType
+    let firebaseDataBase: Firestore
 
     private var calculatorMainViewController: CalculatorMainViewController?
 
-    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType) {
+    init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType, firebaseDataBase: Firestore) {
         self.navigationController = navigationController
         self.viewModuleFactory = viewModuleFactory
+        self.firebaseDataBase = firebaseDataBase
     }
 
     func start() {
-        calculatorMainViewController = viewModuleFactory.createCalculatorMainViewModule()
+        calculatorMainViewController = viewModuleFactory.createCalculatorMainViewModule(firebaseDataBase: firebaseDataBase)
         navigationController.pushViewController(calculatorMainViewController!, animated: true)
     }
 
