@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad12_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,6 +12,7 @@
                 <outlet property="addButton" destination="KLG-g2-3cW" id="Nsm-IN-BZC"/>
                 <outlet property="allClearButton" destination="Cb9-dG-XdN" id="1VP-bu-hq5"/>
                 <outlet property="bitcoinToDollarButton" destination="eLR-Mc-ifA" id="Qmx-Ia-IcC"/>
+                <outlet property="calculatorStackView" destination="l7p-4c-ecM" id="WAD-ZY-H9s"/>
                 <outlet property="cosButton" destination="d2i-sN-D9R" id="h0k-gz-vgT"/>
                 <outlet property="decimalButton" destination="lcj-fg-99j" id="YWy-Kh-vhx"/>
                 <outlet property="divideButton" destination="Lh5-pE-bI3" id="lRe-DX-apC"/>
@@ -36,17 +37,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="1366"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7p-4c-ecM">
-                    <rect key="frame" x="80" y="141.5" width="864" height="1164.5"/>
+                    <rect key="frame" x="16" y="127" width="343" height="520"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0bt-F9-rfd">
-                            <rect key="frame" x="0.0" y="0.0" width="864" height="180"/>
+                            <rect key="frame" x="0.0" y="0.0" width="343" height="72.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-Mc-ifA" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="408" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="163.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                     <state key="normal" title="□">
@@ -57,7 +58,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-MH-2B9" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456" y="0.0" width="408" height="180"/>
+                                    <rect key="frame" x="179.5" y="0.0" width="163.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -78,14 +79,11 @@
                             <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
                         </stackView>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K0V-Qt-2O9">
-                            <rect key="frame" x="0.0" y="197" width="864" height="180"/>
+                            <rect key="frame" x="0.0" y="89.5" width="343" height="72.5"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-dG-XdN" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Cb9-dG-XdN" secondAttribute="height" multiplier="1:1" id="fnF-3p-ajZ"/>
-                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <state key="normal" title="AC">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,11 +93,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8we-VH-tYD" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="228" y="0.0" width="180" height="180"/>
+                                    <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="8we-VH-tYD" secondAttribute="height" multiplier="1:1" id="n9l-6r-pNy"/>
-                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <state key="normal" title="Sin">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,11 +104,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-sN-D9R" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456" y="0.0" width="180" height="180"/>
+                                    <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="d2i-sN-D9R" secondAttribute="height" multiplier="1:1" id="clN-ql-D2L"/>
-                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
                                     <state key="normal" title="Cos">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -123,11 +115,8 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-pE-bI3" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="684" y="0.0" width="180" height="180"/>
+                                    <rect key="frame" x="269.5" y="0.0" width="73.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Lh5-pE-bI3" secondAttribute="height" multiplier="1:1" id="ePs-tE-W2R"/>
-                                    </constraints>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
                                     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <state key="normal" title=" ÷">
@@ -143,263 +132,251 @@
                             </subviews>
                             <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
                         </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-XQ-kS5">
-                            <rect key="frame" x="0.0" y="394" width="864" height="180"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="5vA-fM-8c3">
+                            <rect key="frame" x="0.0" y="179" width="343" height="341"/>
                             <subviews>
-                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-bM-uQ0" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="ySd-bM-uQ0" secondAttribute="height" multiplier="1:1" id="RTO-WJ-9yl"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="7">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="SaV-iR-IdL"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-N1-zSu" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="228" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Xsa-N1-zSu" secondAttribute="height" multiplier="1:1" id="CcX-CU-D6j"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="8">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="Bxl-f3-2nH"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-gR-6EZ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="rE2-gR-6EZ" secondAttribute="height" multiplier="1:1" id="Zq1-6c-qOE"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="9">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="lJG-gG-quL"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-Cm-1Nb" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="684" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="fQG-Cm-1Nb" secondAttribute="height" multiplier="1:1" id="SgR-Em-bz1"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="×">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <state key="selected">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <state key="highlighted" title="×">
-                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="multiplyButtonTapped:" destination="-1" eventType="touchUpInside" id="pqm-UN-7dv"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-Sm-UlO">
-                            <rect key="frame" x="0.0" y="591" width="864" height="180"/>
-                            <subviews>
-                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbl-yR-n3D" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="sbl-yR-n3D" secondAttribute="height" multiplier="1:1" id="Qn5-TX-JO2"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="4">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="cxc-bt-s6b"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-tx-UPt" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="228" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="Lxu-tx-UPt" secondAttribute="height" multiplier="1:1" id="flk-LZ-Cl7"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="5">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="BIO-Ja-cP7"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-6V-KZ1" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="c4o-6V-KZ1" secondAttribute="height" multiplier="1:1" id="LiN-nz-dch"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="6">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="H2p-Je-SHg"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peP-tS-yGG" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="684" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="peP-tS-yGG" secondAttribute="height" multiplier="1:1" id="4dJ-9h-86y"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="−">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <state key="selected">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="subtractButtonTapped:" destination="-1" eventType="touchUpInside" id="34U-EJ-fKI"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-0N-G6W">
-                            <rect key="frame" x="0.0" y="788" width="864" height="180"/>
-                            <subviews>
-                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-yt-9rH" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="xb4-yt-9rH" secondAttribute="height" multiplier="1:1" id="ZIQ-yk-lVi"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="1">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="bk8-eU-KjZ"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-va-DLQ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="228" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="mRb-va-DLQ" secondAttribute="height" multiplier="1:1" id="8c7-g9-YJ7"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="2">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="J7W-hh-yL3"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yy-keV" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="psO-yy-keV" secondAttribute="height" multiplier="1:1" id="tVn-xw-cys"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
-                                    <state key="normal" title="3">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="q7C-LK-Kpw"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-g2-3cW" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="684" y="0.0" width="180" height="180"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="KLG-g2-3cW" secondAttribute="height" multiplier="1:1" id="iNP-P5-Lvd"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <state key="normal" title="+">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <state key="selected">
-                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="1oB-eW-W2a"/>
-                                    </connections>
-                                </button>
-                            </subviews>
-                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
-                        </stackView>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-TX-ebr">
-                            <rect key="frame" x="0.0" y="985" width="864" height="179.5"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-bn-bHT" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="0.0" y="0.0" width="408.5" height="179.5"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
-                                    <state key="normal" title="0">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="DNH-fj-u2a"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-fg-99j" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="456.5" y="0.0" width="180" height="179.5"/>
-                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="lcj-fg-99j" secondAttribute="height" multiplier="1:1" id="sDW-w7-D7d"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                    <state key="normal" title=".">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="decimalButtonTapped:" destination="-1" eventType="touchUpInside" id="3aq-vZ-uU1"/>
-                                    </connections>
-                                </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5P-Og-ndM" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
-                                    <rect key="frame" x="684.5" y="0.0" width="179.5" height="179.5"/>
-                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <constraints>
-                                        <constraint firstAttribute="width" secondItem="c5P-Og-ndM" secondAttribute="height" multiplier="1:1" id="vYY-G5-YLG"/>
-                                    </constraints>
-                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
-                                    <state key="normal" title="=">
-                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </state>
-                                    <connections>
-                                        <action selector="equalButtonTapped:" destination="-1" eventType="touchUpInside" id="z3n-pR-OqL"/>
-                                    </connections>
-                                </button>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="H1k-pX-mkS">
+                                    <rect key="frame" x="0.0" y="0.0" width="253.5" height="341"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-XQ-kS5">
+                                            <rect key="frame" x="0.0" y="0.0" width="253.5" height="72.5"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-bM-uQ0" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="7">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="SaV-iR-IdL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-N1-zSu" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="8">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="Bxl-f3-2nH"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-gR-6EZ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="9">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="lJG-gG-quL"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-Sm-UlO">
+                                            <rect key="frame" x="0.0" y="89.5" width="253.5" height="72.5"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbl-yR-n3D" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="4">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="cxc-bt-s6b"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-tx-UPt" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="5">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="BIO-Ja-cP7"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-6V-KZ1" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="6">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="H2p-Je-SHg"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-0N-G6W">
+                                            <rect key="frame" x="0.0" y="179" width="253.5" height="72.5"/>
+                                            <subviews>
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-yt-9rH" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="1">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="bk8-eU-KjZ"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-va-DLQ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="2">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="J7W-hh-yL3"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yy-keV" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
+                                                    <state key="normal" title="3">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="q7C-LK-Kpw"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-TX-ebr">
+                                            <rect key="frame" x="0.0" y="268.5" width="253.5" height="72.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-bn-bHT" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="165" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
+                                                    <state key="normal" title="0">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="DNH-fj-u2a"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-fg-99j" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="181" y="0.0" width="72.5" height="72.5"/>
+                                                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="lcj-fg-99j" secondAttribute="height" multiplier="1:1" id="sDW-w7-D7d"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                    <state key="normal" title=".">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="decimalButtonTapped:" destination="-1" eventType="touchUpInside" id="3aq-vZ-uU1"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iqc-bn-bHT" firstAttribute="width" secondItem="lcj-fg-99j" secondAttribute="width" multiplier="2.275" id="sbq-2n-eRA"/>
+                                            </constraints>
+                                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="fm0-aK-1kI">
+                                    <rect key="frame" x="270.5" y="0.0" width="72.5" height="341"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="kn3-O9-MhF">
+                                            <rect key="frame" x="0.0" y="0.0" width="72.5" height="252.5"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-Cm-1Nb" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="72.5" height="70"/>
+                                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="×">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="highlighted" title="×">
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="multiplyButtonTapped:" destination="-1" eventType="touchUpInside" id="pqm-UN-7dv"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peP-tS-yGG" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="91" width="72.5" height="70.5"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="−">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="subtractButtonTapped:" destination="-1" eventType="touchUpInside" id="34U-EJ-fKI"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-g2-3cW" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="182.5" width="72.5" height="70"/>
+                                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                                    <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="+">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <state key="selected">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="addButtonTapped:" destination="-1" eventType="touchUpInside" id="1oB-eW-W2a"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5P-Og-ndM" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="269.5" width="72.5" height="71.5"/>
+                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
+                                            <state key="normal" title="=">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="equalButtonTapped:" destination="-1" eventType="touchUpInside" id="z3n-pR-OqL"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </stackView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="iqc-bn-bHT" firstAttribute="width" secondItem="lcj-fg-99j" secondAttribute="width" multiplier="2.275" id="sbq-2n-eRA"/>
+                                <constraint firstItem="fQG-Cm-1Nb" firstAttribute="width" secondItem="rE2-gR-6EZ" secondAttribute="height" multiplier="1:1" id="OEA-q6-hkc"/>
+                                <constraint firstItem="c5P-Og-ndM" firstAttribute="width" secondItem="psO-yy-keV" secondAttribute="height" multiplier="1:1" id="bHi-6C-eXk"/>
+                                <constraint firstItem="peP-tS-yGG" firstAttribute="width" secondItem="c4o-6V-KZ1" secondAttribute="height" multiplier="1:1" id="euJ-G1-kR9"/>
+                                <constraint firstItem="KLG-g2-3cW" firstAttribute="width" secondItem="psO-yy-keV" secondAttribute="height" multiplier="1:1" id="gJh-kx-Zfe"/>
                             </constraints>
-                            <variation key="heightClass=regular-widthClass=regular" spacing="48"/>
                         </stackView>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="ySd-bM-uQ0" firstAttribute="height" secondItem="Cb9-dG-XdN" secondAttribute="height" id="GJh-tg-uoF"/>
                         <constraint firstItem="Eic-MH-2B9" firstAttribute="height" secondItem="Lh5-pE-bI3" secondAttribute="height" id="dr3-ot-pqH"/>
                     </constraints>
                     <variation key="heightClass=regular-widthClass=regular" spacing="17"/>
                 </stackView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="efU-sZ-Rqf">
-                    <rect key="frame" x="80" y="24" width="864" height="107.5"/>
+                    <rect key="frame" x="16" y="33" width="343" height="84"/>
                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="70"/>
                     <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>

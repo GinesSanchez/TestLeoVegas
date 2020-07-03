@@ -22,6 +22,7 @@ protocol CalculatorManagerType {
 
     func getBitcoinValueFor(dollarValue: Double, completion: @escaping (Result<Double, CalculatorManagerError>) -> Void)
     func getLocationInfoFrom(latitude: Double, longitude: Double, completion: @escaping (Result<String, CalculatorManagerError>) -> Void)
+    func getFeatureToggle(completion: @escaping (Result<CalculatorFeatureToggle, CalculatorManagerError>) -> Void)
 }
 
 final class CalculatorManager: CalculatorManagerType {
@@ -33,7 +34,7 @@ final class CalculatorManager: CalculatorManagerType {
     }
 
     func getBitcoinValueFor(dollarValue: Double, completion: @escaping (Result<Double, CalculatorManagerError>) -> Void) {
-        let docRef = firebaseDataBase.collection("bitcoinValues").document("Values")
+        let docRef = firebaseDataBase.collection("calculator").document("bitcoinValue")
 
         docRef.getDocument { (document, error) in
             guard error == nil else {
@@ -53,7 +54,7 @@ final class CalculatorManager: CalculatorManagerType {
     }
 
     func getLocationInfoFrom(latitude: Double, longitude: Double, completion: @escaping (Result<String, CalculatorManagerError>) -> Void) {
-        let docRef = firebaseDataBase.collection("localizations").document("description")
+        let docRef = firebaseDataBase.collection("calculator").document("localizations")
 
         docRef.getDocument { (document, error) in
             guard error == nil else {
@@ -69,6 +70,23 @@ final class CalculatorManager: CalculatorManagerType {
             }
 
             completion(.success(localizationInfo))
+        }
+    }
+
+    func getFeatureToggle(completion: @escaping (Result<CalculatorFeatureToggle, CalculatorManagerError>) -> Void) {
+        let docRef = firebaseDataBase.collection("calculator").document("featureToggle")
+        let defaultFeatureToggle = CalculatorFeatureToggle()
+
+        docRef.getDocument { (document, error) in
+            guard error == nil else {
+                return completion(.success(defaultFeatureToggle))
+            }
+
+            guard let document = document, document.exists, let dictionary = document.data() else {
+                return completion(.success(defaultFeatureToggle))
+            }
+
+            completion(.success(CalculatorFeatureToggle(dictionary: dictionary)))
         }
     }
 }

@@ -19,6 +19,9 @@ protocol CalculatorMainViewControllerDelegate: class {
 
 final class CalculatorMainViewController: UIViewController {
 
+    //Views
+    @IBOutlet weak var calculatorStackView: UIStackView!
+
     //Actions
     @IBOutlet weak var bitcoinToDollarButton: CalculatorButton!
     @IBOutlet weak var mapButton: CalculatorButton!
@@ -142,6 +145,21 @@ extension CalculatorMainViewController: CalculatorMainViewModelDelegate {
     func viewModel(_ viewModel: CalculatorMainViewModelType, setDefaultButtonStateForOperation operation: Operation) {
         setButton(isSelected: false, operation: operation)
     }
+
+    func viewModel(_ viewModel: CalculatorMainViewModelType, isHiddenCalculator: Bool) {
+        calculatorStackView.isHidden = isHiddenCalculator
+    }
+
+    func viewModel(_ viewModel: CalculatorMainViewModelType, updateViewWithFeatureToogle featureToggle: CalculatorFeatureToggle) {
+        addButton.isHidden = !featureToggle.add
+        subtractButton.isHidden = !featureToggle.subtract
+        divideButton.isHidden = !featureToggle.divide
+        multiplyButton.isHidden = !featureToggle.multiply
+        cosButton.isHidden = !featureToggle.cosine
+        sinButton.isHidden = !featureToggle.sine
+        mapButton.isHidden = !featureToggle.mapInfo
+        bitcoinToDollarButton.isHidden = !featureToggle.bitcoinToDollar
+    }
 }
 
 // MARK: Helper functions
@@ -149,15 +167,15 @@ private extension CalculatorMainViewController {
     func setButton(isSelected: Bool, operation: Operation) {
         switch operation {
         case .divide:
-            self.divideButton.isSelected = isSelected
+            divideButton.isSelected = isSelected
         case .multiply:
-            self.multiplyButton.isSelected = isSelected
+            multiplyButton.isSelected = isSelected
         case .subtract:
-            self.subtractButton.isSelected = isSelected
+            subtractButton.isSelected = isSelected
         case .add:
-            self.addButton.isSelected = isSelected
+            addButton.isSelected = isSelected
         case .mapLocation:
-            self.mapButton.isSelected = isSelected
+            mapButton.isSelected = isSelected
         default:
             break
         }

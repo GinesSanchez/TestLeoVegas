@@ -33,6 +33,7 @@ enum CalculatorViewModelState {
 enum CalculatorViewModelEvent {
     case none
     case viewLoaded
+    case featureToggleLoaded
     case allClearTapped
     case operationTapped(operation: Operation)
     case numberTapped(number: Int)
@@ -44,17 +45,21 @@ protocol CalculatorMainViewModelDelegate: class {
     func viewModel(_ viewModel: CalculatorMainViewModelType, updateScreenText text: String, operation: Operation)
     func viewModel(_ viewModel: CalculatorMainViewModelType, setSelectedButtonStateForOperation operation: Operation)
     func viewModel(_ viewModel: CalculatorMainViewModelType, setDefaultButtonStateForOperation operation: Operation)
+    func viewModel(_ viewModel: CalculatorMainViewModelType, isHiddenCalculator: Bool)
+    func viewModel(_ viewModel: CalculatorMainViewModelType, updateViewWithFeatureToogle: CalculatorFeatureToggle)
 }
 
 protocol CalculatorMainViewModelType {
     var delegate: CalculatorMainViewModelDelegate? { get }
     var calculatorManager: CalculatorManagerType { get }
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType)
+    var internetNetworkManager: InternetConnectionManagerType { get }
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType, internetNetworkManager: InternetConnectionManagerType)
 }
 
 final class CalculatorMainViewModel: CalculatorMainViewModelType {
     weak var delegate: CalculatorMainViewModelDelegate?
     internal let calculatorManager: CalculatorManagerType
+    internal let internetNetworkManager: InternetConnectionManagerType
 
     private var firstOperator: Double?
     private var secondOperator: Double?
@@ -74,9 +79,10 @@ final class CalculatorMainViewModel: CalculatorMainViewModelType {
         }
     }
 
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType) {
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType, internetNetworkManager: InternetConnectionManagerType) {
         self.delegate = delegate
         self.calculatorManager = calculatorManager
+        self.internetNetworkManager = internetNetworkManager
 
         self.state = .initialized
         self.event = .none
@@ -120,6 +126,30 @@ private extension CalculatorMainViewModel {
         print("state: \(state) - event: \(event)")
         switch (state, event) {
         case (.initialized, .viewLoaded):
+            self.currentScreenText = "Loading..."      //TODO: Localize
+            delegate?.viewModel(self, isHiddenCalculator: true)
+
+            if internetNetworkManager.isConnectedToNetwork() {
+                calculatorManager.getFeatureToggle { [weak self] (result) in
+                    guard let self = self else { return }
+                    switch result {
+                    case .failure:
+                        //TODO: Show error message on an alert view
+                        self.currentScreenText = "Error"    //TODO: Localize
+                        break
+                    case .success(let featureToggle):
+                        self.delegate?.viewModel(self, isHiddenCalculator: false)
+                        self.delegate?.viewModel(self, updateViewWithFeatureToogle: featureToggle)
+                        self.event = .featureToggleLoaded
+                    }
+                }
+            } else {
+                self.delegate?.viewModel(self, isHiddenCalculator: false)
+                self.delegate?.viewModel(self, updateViewWithFeatureToogle: CalculatorFeatureToggle.offline())
+                self.event = .featureToggleLoaded
+            }
+
+        case (.initialized, .featureToggleLoaded):
             currentScreenText = "0"
         case (.initialized, .numberTapped(let number)):
             self.state = .writingFirstOperator
