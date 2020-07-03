@@ -9,7 +9,7 @@
 import UIKit
 
 @IBDesignable
-final class CalculatorButton: UIButton {
+class CalculatorNumberButton: UIButton {
 
     override init(frame: CGRect){
         super.init(frame: frame)
@@ -25,7 +25,11 @@ final class CalculatorButton: UIButton {
     }
 
     func setup() {
-        self.clipsToBounds = true
-        self.layer.cornerRadius = 14
+        clipsToBounds = true
+        layer.cornerRadius = 14
+
+        setTitleColor(Asset.calculatorButtonTitleNormal.color, for: .normal)
+        setTitleColor(Asset.calculatorButtonTitleSelected.color, for: .selected)
+        backgroundColor = Asset.calculatorNumber.color
     }
 }

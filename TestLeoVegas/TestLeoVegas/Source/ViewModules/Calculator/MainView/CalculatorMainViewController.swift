@@ -23,29 +23,29 @@ final class CalculatorMainViewController: UIViewController {
     @IBOutlet weak var calculatorStackView: UIStackView!
 
     //Actions
-    @IBOutlet weak var bitcoinToDollarButton: CalculatorButton!
-    @IBOutlet weak var mapButton: CalculatorButton!
-    @IBOutlet weak var allClearButton: CalculatorButton!
-    @IBOutlet weak var sinButton: CalculatorButton!
-    @IBOutlet weak var cosButton: CalculatorButton!
-    @IBOutlet weak var divideButton: CalculatorButton!
-    @IBOutlet weak var multiplyButton: CalculatorButton!
-    @IBOutlet weak var subtractButton: CalculatorButton!
-    @IBOutlet weak var addButton: CalculatorButton!
-    @IBOutlet weak var equalButton: CalculatorButton!
+    @IBOutlet weak var allClearButton: CalculatorAllClearButton!
+    @IBOutlet weak var bitcoinToDollarButton: CalculatorOperationButton!
+    @IBOutlet weak var mapButton: CalculatorOperationButton!
+    @IBOutlet weak var sinButton: CalculatorOperationButton!
+    @IBOutlet weak var cosButton: CalculatorOperationButton!
+    @IBOutlet weak var divideButton: CalculatorOperationButton!
+    @IBOutlet weak var multiplyButton: CalculatorOperationButton!
+    @IBOutlet weak var subtractButton: CalculatorOperationButton!
+    @IBOutlet weak var addButton: CalculatorOperationButton!
+    @IBOutlet weak var equalButton: CalculatorOperationButton!
 
     //Numbers
-    @IBOutlet weak var decimalButton: CalculatorButton!
-    @IBOutlet weak var nineButton: CalculatorButton!
-    @IBOutlet weak var eightButton: CalculatorButton!
-    @IBOutlet weak var sevenButton: CalculatorButton!
-    @IBOutlet weak var sixButton: CalculatorButton!
-    @IBOutlet weak var fiveButton: CalculatorButton!
-    @IBOutlet weak var fourButton: CalculatorButton!
-    @IBOutlet weak var threeButton: CalculatorButton!
-    @IBOutlet weak var twoButton: CalculatorButton!
-    @IBOutlet weak var oneButton: CalculatorButton!
-    @IBOutlet weak var zeroButton: CalculatorButton!
+    @IBOutlet weak var decimalButton: CalculatorNumberButton!
+    @IBOutlet weak var nineButton: CalculatorNumberButton!
+    @IBOutlet weak var eightButton: CalculatorNumberButton!
+    @IBOutlet weak var sevenButton: CalculatorNumberButton!
+    @IBOutlet weak var sixButton: CalculatorNumberButton!
+    @IBOutlet weak var fiveButton: CalculatorNumberButton!
+    @IBOutlet weak var fourButton: CalculatorNumberButton!
+    @IBOutlet weak var threeButton: CalculatorNumberButton!
+    @IBOutlet weak var twoButton: CalculatorNumberButton!
+    @IBOutlet weak var oneButton: CalculatorNumberButton!
+    @IBOutlet weak var zeroButton: CalculatorNumberButton!
 
     //Labels
     @IBOutlet weak var screenLabel: UILabel!
@@ -63,22 +63,21 @@ final class CalculatorMainViewController: UIViewController {
 // MARK: Setup functions
 private extension CalculatorMainViewController {
     func setUp() {
+        viewSetup()
         navigationBarSetup()
-        buttonsSetup()
         labelsSetup()
+    }
+
+    func viewSetup() {
+        view.backgroundColor = Asset.calculatorBackground.color
     }
 
     func navigationBarSetup() {
         self.navigationController?.navigationBar.isHidden = true        
     }
 
-    func buttonsSetup() {
-        //TODO: Add color set up
-        //TODO: Add online operator set up
-    }
-
     func labelsSetup() {
-        //TODO: Add color set up        
+        screenLabel.textColor = Asset.calculatorScreenMessage.color
     }
 }
 

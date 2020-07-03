@@ -46,7 +46,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="0bt-F9-rfd">
                             <rect key="frame" x="0.0" y="0.0" width="343" height="72.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-Mc-ifA" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eLR-Mc-ifA" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="163.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
@@ -57,7 +57,7 @@
                                         <action selector="bitcoinToDollarButtonTapped:" destination="-1" eventType="touchUpInside" id="v2u-88-vz4"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-MH-2B9" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Eic-MH-2B9" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="179.5" y="0.0" width="163.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -81,7 +81,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="K0V-Qt-2O9">
                             <rect key="frame" x="0.0" y="89.5" width="343" height="72.5"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-dG-XdN" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb9-dG-XdN" customClass="CalculatorAllClearButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -92,7 +92,7 @@
                                         <action selector="allClearButtonTapped:" destination="-1" eventType="touchUpInside" id="zJO-6A-fdG"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8we-VH-tYD" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8we-VH-tYD" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -103,7 +103,7 @@
                                         <action selector="sinButtonTapped:" destination="-1" eventType="touchUpInside" id="d4W-4P-QfH"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-sN-D9R" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d2i-sN-D9R" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="24"/>
@@ -114,7 +114,7 @@
                                         <action selector="cosButtonTapped:" destination="-1" eventType="touchUpInside" id="5c3-rq-kMg"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-pE-bI3" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lh5-pE-bI3" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                     <rect key="frame" x="269.5" y="0.0" width="73.5" height="72.5"/>
                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
@@ -141,7 +141,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Kef-XQ-kS5">
                                             <rect key="frame" x="0.0" y="0.0" width="253.5" height="72.5"/>
                                             <subviews>
-                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-bM-uQ0" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ySd-bM-uQ0" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -152,7 +152,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="SaV-iR-IdL"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-N1-zSu" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xsa-N1-zSu" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -163,7 +163,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="Bxl-f3-2nH"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-gR-6EZ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rE2-gR-6EZ" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -180,7 +180,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="qiZ-Sm-UlO">
                                             <rect key="frame" x="0.0" y="89.5" width="253.5" height="72.5"/>
                                             <subviews>
-                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbl-yR-n3D" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbl-yR-n3D" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -191,7 +191,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="cxc-bt-s6b"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-tx-UPt" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lxu-tx-UPt" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -202,7 +202,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="BIO-Ja-cP7"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-6V-KZ1" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4o-6V-KZ1" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -219,7 +219,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="bRM-0N-G6W">
                                             <rect key="frame" x="0.0" y="179" width="253.5" height="72.5"/>
                                             <subviews>
-                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-yt-9rH" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xb4-yt-9rH" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -230,7 +230,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="bk8-eU-KjZ"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-va-DLQ" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mRb-va-DLQ" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="90" y="0.0" width="73.5" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -241,7 +241,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="J7W-hh-yL3"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yy-keV" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psO-yy-keV" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="179.5" y="0.0" width="74" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="26"/>
@@ -258,7 +258,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="5jg-TX-ebr">
                                             <rect key="frame" x="0.0" y="268.5" width="253.5" height="72.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-bn-bHT" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iqc-bn-bHT" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="165" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="28"/>
@@ -269,7 +269,7 @@
                                                         <action selector="numberButtonTapped:" destination="-1" eventType="touchUpInside" id="DNH-fj-u2a"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-fg-99j" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lcj-fg-99j" customClass="CalculatorNumberButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="181" y="0.0" width="72.5" height="72.5"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
@@ -297,7 +297,7 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="kn3-O9-MhF">
                                             <rect key="frame" x="0.0" y="0.0" width="72.5" height="252.5"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-Cm-1Nb" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fQG-Cm-1Nb" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="72.5" height="70"/>
                                                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
@@ -315,7 +315,7 @@
                                                         <action selector="multiplyButtonTapped:" destination="-1" eventType="touchUpInside" id="pqm-UN-7dv"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peP-tS-yGG" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peP-tS-yGG" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="91" width="72.5" height="70.5"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
@@ -330,7 +330,7 @@
                                                         <action selector="subtractButtonTapped:" destination="-1" eventType="touchUpInside" id="34U-EJ-fKI"/>
                                                     </connections>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-g2-3cW" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KLG-g2-3cW" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="182.5" width="72.5" height="70"/>
                                                     <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
@@ -347,7 +347,7 @@
                                                 </button>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5P-Og-ndM" customClass="CalculatorButton" customModule="TestLeoVegas" customModuleProvider="target">
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5P-Og-ndM" customClass="CalculatorOperationButton" customModule="TestLeoVegas" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="269.5" width="72.5" height="71.5"/>
                                             <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="28"/>
