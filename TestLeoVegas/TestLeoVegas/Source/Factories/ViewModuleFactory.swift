@@ -17,7 +17,7 @@ final class ViewModuleFactory: ViewModuleFactoryType {
     func createCalculatorMainViewModule(firebaseDataBase: Firestore) -> CalculatorMainViewController {
         let viewController: CalculatorMainViewController = CalculatorMainViewController(nibName: "CalculatorMainViewController", bundle: nil)
         let viewModel: CalculatorMainViewModel = CalculatorMainViewModel(delegate: viewController,
-                                                                         calculatorManager: CalculatorManager(firebaseDataBase: firebaseDataBase), internetNetworkManager: InternetConnectionManager())
+                                                                         calculatorManager: CalculatorManager(firebaseDataBase: firebaseDataBase, internetConnectionManager: InternetConnectionManager()))
         viewController.viewModel = viewModel
         return viewController
     }

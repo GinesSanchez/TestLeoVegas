@@ -47,19 +47,18 @@ protocol CalculatorMainViewModelDelegate: class {
     func viewModel(_ viewModel: CalculatorMainViewModelType, setDefaultButtonStateForOperation operation: Operation)
     func viewModel(_ viewModel: CalculatorMainViewModelType, isHiddenCalculator: Bool)
     func viewModel(_ viewModel: CalculatorMainViewModelType, updateViewWithFeatureToogle: CalculatorFeatureToggle)
+    func viewModel(_ viewModel: CalculatorMainViewModelType, showErrorAlertWithMessage: String)
 }
 
 protocol CalculatorMainViewModelType {
     var delegate: CalculatorMainViewModelDelegate? { get }
     var calculatorManager: CalculatorManagerType { get }
-    var internetNetworkManager: InternetConnectionManagerType { get }
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType, internetNetworkManager: InternetConnectionManagerType)
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType)
 }
 
 final class CalculatorMainViewModel: CalculatorMainViewModelType {
     weak var delegate: CalculatorMainViewModelDelegate?
     internal let calculatorManager: CalculatorManagerType
-    internal let internetNetworkManager: InternetConnectionManagerType
 
     private var firstOperator: Double?
     private var secondOperator: Double?
@@ -79,10 +78,9 @@ final class CalculatorMainViewModel: CalculatorMainViewModelType {
         }
     }
 
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType, internetNetworkManager: InternetConnectionManagerType) {
+    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType) {
         self.delegate = delegate
         self.calculatorManager = calculatorManager
-        self.internetNetworkManager = internetNetworkManager
 
         self.state = .initialized
         self.event = .none
@@ -128,27 +126,17 @@ private extension CalculatorMainViewModel {
         case (.initialized, .viewLoaded):
             self.currentScreenText = "Loading..."      //TODO: Localize
             delegate?.viewModel(self, isHiddenCalculator: true)
-
-            if internetNetworkManager.isConnectedToNetwork() {
-                calculatorManager.getFeatureToggle { [weak self] (result) in
-                    guard let self = self else { return }
-                    switch result {
-                    case .failure:
-                        //TODO: Show error message on an alert view
-                        self.currentScreenText = "Error"    //TODO: Localize
-                        break
-                    case .success(let featureToggle):
-                        self.delegate?.viewModel(self, isHiddenCalculator: false)
-                        self.delegate?.viewModel(self, updateViewWithFeatureToogle: featureToggle)
-                        self.event = .featureToggleLoaded
-                    }
+            calculatorManager.getFeatureToggle { [weak self] (result) in
+                guard let self = self else { return }
+                switch result {
+                case .success(let featureToggle):
+                    self.delegate?.viewModel(self, isHiddenCalculator: false)
+                    self.delegate?.viewModel(self, updateViewWithFeatureToogle: featureToggle)
+                    self.event = .featureToggleLoaded
+                default:
+                    break
                 }
-            } else {
-                self.delegate?.viewModel(self, isHiddenCalculator: false)
-                self.delegate?.viewModel(self, updateViewWithFeatureToogle: CalculatorFeatureToggle.offline())
-                self.event = .featureToggleLoaded
             }
-
         case (.initialized, .featureToggleLoaded):
             currentScreenText = "0"
         case (.initialized, .numberTapped(let number)):
@@ -237,10 +225,15 @@ private extension CalculatorMainViewModel {
                 calculatorManager.getBitcoinValueFor(dollarValue: dolarDouble) { [weak self] (result) in
                         guard let self = self else { return }
                         switch result {
-                        case .failure:
-                            //TODO: Show error message on an alert view
-                            self.currentScreenText = "Error"    //TODO: Localize
-                            break
+                        case .failure(let error):
+                            switch error {
+                            case .noInternetConnection:
+                                self.delegate?.viewModel(self, showErrorAlertWithMessage: "There is not internet connection.")
+                                self.currentScreenText = "Error"
+                            default:
+                                self.delegate?.viewModel(self, showErrorAlertWithMessage: "There was a problem getting the location info. Try again later.")
+                                self.currentScreenText = "Error"
+                            }
                         case .success(let bitcoinValue):
                             self.firstOperator = bitcoinValue
                             self.currentScreenText = self.formartResult(self.firstOperator)
@@ -287,22 +280,24 @@ private extension CalculatorMainViewModel {
                 self.firstOperator = firstOperator / secondOperator
                 currentScreenText = formartResult(self.firstOperator)
             case .mapLocation:
-
-            calculatorManager.getLocationInfoFrom(latitude: firstOperator, longitude: secondOperator) { [weak self] (result) in
+                calculatorManager.getLocationInfoFrom(latitude: firstOperator, longitude: secondOperator) { [weak self] (result) in
                     guard let self = self else { return }
                     switch result {
-                    case .failure:
-                        //TODO: Show error message on an alert view
-                        self.currentScreenText = "Error"    //TODO: Localize
-                        break
+                    case .failure(let error):
+                    switch error {
+                    case .noInternetConnection:
+                        self.delegate?.viewModel(self, showErrorAlertWithMessage: "There is not internet connection.")
+                        self.currentScreenText = "Error"
+                    default:
+                        self.delegate?.viewModel(self, showErrorAlertWithMessage: "There was a problem getting the location info. Try again later.")
+                        self.currentScreenText = "Error"
+                    }
                     case .success(let locationInfo):
                         self.currentScreenText = locationInfo
                         self.firstOperator = 0
                         self.secondOperator = 0
                     }
                 }
-                //TODO: Add special operation completed state
-                break
             default:
                 break
             }

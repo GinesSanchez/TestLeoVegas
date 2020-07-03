@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		55246A63B946FE00613B9ED8 /* Pods_TestLeoVegasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F0AFC44F264B7C8C5367B2 /* Pods_TestLeoVegasTests.framework */; };
 		75144E3924AF3FB0004ED6A3 /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75144E3824AF3FB0004ED6A3 /* InternetConnectionManager.swift */; };
+		75144E3C24AF47B7004ED6A3 /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */; };
 		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
 		7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520552B24AE249200A3983F /* CalculatorManager.swift */; };
 		7520553224AE55B700A3983F /* CalculatorFeatureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */; };
@@ -44,6 +45,7 @@
 		1B00787DF84212B4B8CAADED /* Pods-TestLeoVegasTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegasTests.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegasTests/Pods-TestLeoVegasTests.release.xcconfig"; sourceTree = "<group>"; };
 		29873AF3A2E87BA9C0DA8206 /* Pods-TestLeoVegas.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TestLeoVegas.release.xcconfig"; path = "Target Support Files/Pods-TestLeoVegas/Pods-TestLeoVegas.release.xcconfig"; sourceTree = "<group>"; };
 		75144E3824AF3FB0004ED6A3 /* InternetConnectionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionManager.swift; sourceTree = "<group>"; };
+		75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
 		7520552B24AE249200A3983F /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
 		7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorFeatureToggle.swift; sourceTree = "<group>"; };
@@ -98,6 +100,14 @@
 				75144E3824AF3FB0004ED6A3 /* InternetConnectionManager.swift */,
 			);
 			path = InternetConnection;
+			sourceTree = "<group>";
+		};
+		75144E3A24AF47A2004ED6A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7520552924AE247300A3983F /* Managers */ = {
@@ -172,6 +182,7 @@
 		75BF793F24AA5BFB0071B1C0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				75144E3A24AF47A2004ED6A3 /* Extensions */,
 				7520552924AE247300A3983F /* Managers */,
 				75BF795124AA5F5D0071B1C0 /* Factories */,
 				75BF794824AA5ED60071B1C0 /* ViewModules */,
@@ -453,6 +464,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				75144E3C24AF47B7004ED6A3 /* ViewController+Alert.swift in Sources */,
 				75BF795024AA5F4A0071B1C0 /* CalculatorCoordinator.swift in Sources */,
 				75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */,
 				75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */,

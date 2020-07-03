@@ -160,6 +160,10 @@ extension CalculatorMainViewController: CalculatorMainViewModelDelegate {
         mapButton.isHidden = !featureToggle.mapInfo
         bitcoinToDollarButton.isHidden = !featureToggle.bitcoinToDollar
     }
+
+    func viewModel(_ viewModel: CalculatorMainViewModelType, showErrorAlertWithMessage message: String) {
+        showErrorAlert(message: message)
+    }
 }
 
 // MARK: Helper functions
