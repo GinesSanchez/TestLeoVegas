@@ -13,6 +13,7 @@ target 'TestLeoVegas' do
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
   pod 'FirebaseFirestoreSwift'
+  pod 'SwiftGen', '~> 6.0'
 
   target 'TestLeoVegasTests' do
     inherit! :search_paths
