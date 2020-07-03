@@ -1,0 +1,13 @@
+/* 
+  Localized.strings
+  Created by Gines Sanchez Merono on 2020-07-03.
+*/
+
+"alert.error.title" = "Error";
+"alert.error.button.title" = "Okay";
+
+"calculator.screen.error.message" = "Error";
+"calculator.loading.message" = "Loading...";
+"calculator.error.message.no_internet" = "There is not internet connection.";
+"calculator.error.message.generic_location_info" = "There was a problem getting the location info. Try again later.";
+"calculator.error.message.generic_bitcoin_dolar_value" = "There was a problem getting the value in dollars. Try again later.";

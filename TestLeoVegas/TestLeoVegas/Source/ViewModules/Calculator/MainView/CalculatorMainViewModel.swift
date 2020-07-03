@@ -124,7 +124,7 @@ private extension CalculatorMainViewModel {
         print("state: \(state) - event: \(event)")
         switch (state, event) {
         case (.initialized, .viewLoaded):
-            self.currentScreenText = "Loading..."      //TODO: Localize
+            self.currentScreenText = L10n.Calculator.Loading.message
             delegate?.viewModel(self, isHiddenCalculator: true)
             calculatorManager.getFeatureToggle { [weak self] (result) in
                 guard let self = self else { return }
@@ -219,7 +219,7 @@ private extension CalculatorMainViewModel {
             switch currentOperation {
                 case .bitCoinToDollar:
                     guard let dolarDouble = Double(currentScreenText) else {
-                        self.currentScreenText = "Error"    //TODO: Localize
+                        self.currentScreenText = L10n.Calculator.Screen.Error.message
                         return
                     }
                 calculatorManager.getBitcoinValueFor(dollarValue: dolarDouble) { [weak self] (result) in
@@ -228,11 +228,11 @@ private extension CalculatorMainViewModel {
                         case .failure(let error):
                             switch error {
                             case .noInternetConnection:
-                                self.delegate?.viewModel(self, showErrorAlertWithMessage: "There is not internet connection.")
-                                self.currentScreenText = "Error"
+                                self.delegate?.viewModel(self, showErrorAlertWithMessage: L10n.Calculator.Error.Message.noInternet)
+                                self.currentScreenText = L10n.Calculator.Screen.Error.message
                             default:
-                                self.delegate?.viewModel(self, showErrorAlertWithMessage: "There was a problem getting the location info. Try again later.")
-                                self.currentScreenText = "Error"
+                                self.delegate?.viewModel(self, showErrorAlertWithMessage: L10n.Calculator.Error.Message.genericBitcoinDolarValue)
+                                self.currentScreenText = L10n.Calculator.Screen.Error.message
                             }
                         case .success(let bitcoinValue):
                             self.firstOperator = bitcoinValue
@@ -242,14 +242,14 @@ private extension CalculatorMainViewModel {
                     break
                 case .sin:
                     guard let currentFloatValue = Double(currentScreenText) else {
-                        self.currentScreenText = "Error"    //TODO: Localize
+                        self.currentScreenText = L10n.Calculator.Screen.Error.message
                         return
                     }
                     firstOperator = __sinpi(currentFloatValue/180.0)
                     currentScreenText = formartResult(firstOperator)
                 case .cos:
                     guard let currentFloatValue = Double(currentScreenText) else {
-                        self.currentScreenText = "Error"    //TODO: Localize
+                        self.currentScreenText = L10n.Calculator.Screen.Error.message
                         return
                     }
                     firstOperator = __cospi(currentFloatValue/180.0)
@@ -274,7 +274,7 @@ private extension CalculatorMainViewModel {
                 self.currentScreenText = formartResult(self.firstOperator)
             case .divide:
                 guard secondOperator != 0 else {
-                    self.currentScreenText = "Error"    //TODO: Localize
+                    self.currentScreenText = L10n.Calculator.Screen.Error.message
                     return
                 }
                 self.firstOperator = firstOperator / secondOperator
@@ -286,11 +286,11 @@ private extension CalculatorMainViewModel {
                     case .failure(let error):
                     switch error {
                     case .noInternetConnection:
-                        self.delegate?.viewModel(self, showErrorAlertWithMessage: "There is not internet connection.")
-                        self.currentScreenText = "Error"
+                        self.delegate?.viewModel(self, showErrorAlertWithMessage: L10n.Calculator.Error.Message.noInternet)
+                        self.currentScreenText = L10n.Calculator.Screen.Error.message
                     default:
-                        self.delegate?.viewModel(self, showErrorAlertWithMessage: "There was a problem getting the location info. Try again later.")
-                        self.currentScreenText = "Error"
+                        self.delegate?.viewModel(self, showErrorAlertWithMessage: L10n.Calculator.Error.Message.genericLocationInfo)
+                        self.currentScreenText = L10n.Calculator.Screen.Error.message
                     }
                     case .success(let locationInfo):
                         self.currentScreenText = locationInfo

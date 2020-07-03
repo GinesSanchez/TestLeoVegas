@@ -13,6 +13,9 @@
 		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
 		7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520552B24AE249200A3983F /* CalculatorManager.swift */; };
 		7520553224AE55B700A3983F /* CalculatorFeatureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */; };
+		752D74AA24AF7F7C002C4EA9 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752D74A824AF7F7C002C4EA9 /* Localized.strings */; };
+		752D74AF24AF8093002C4EA9 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 752D74AE24AF8093002C4EA9 /* swiftgen.yml */; };
+		752D74B524AF82FA002C4EA9 /* L10n.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752D74B424AF82FA002C4EA9 /* L10n.generated.swift */; };
 		753D42CB24AB56A10046FA9F /* CalculatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D42CA24AB56A10046FA9F /* CalculatorButton.swift */; };
 		7598D2927F32D5307B8C75B7 /* Pods_TestLeoVegas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB95EA2CCA7D1F7442247FD3 /* Pods_TestLeoVegas.framework */; };
 		75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791824AA43520071B1C0 /* AppDelegate.swift */; };
@@ -49,6 +52,11 @@
 		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
 		7520552B24AE249200A3983F /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
 		7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorFeatureToggle.swift; sourceTree = "<group>"; };
+		752D74A924AF7F7C002C4EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
+		752D74AB24AF7FA7002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		752D74AC24AF7FA8002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
+		752D74AE24AF8093002C4EA9 /* swiftgen.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = swiftgen.yml; sourceTree = "<group>"; };
+		752D74B424AF82FA002C4EA9 /* L10n.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = L10n.generated.swift; sourceTree = "<group>"; };
 		753D42CA24AB56A10046FA9F /* CalculatorButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorButton.swift; sourceTree = "<group>"; };
 		75BF791524AA43520071B1C0 /* TestLeoVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeoVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF791824AA43520071B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -136,10 +144,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		752D74B324AF82DC002C4EA9 /* SwiftGen */ = {
+			isa = PBXGroup;
+			children = (
+				752D74B424AF82FA002C4EA9 /* L10n.generated.swift */,
+			);
+			path = SwiftGen;
+			sourceTree = "<group>";
+		};
 		75BF790C24AA43520071B1C0 = {
 			isa = PBXGroup;
 			children = (
 				75BF793C24AA47570071B1C0 /* Podfile */,
+				752D74AE24AF8093002C4EA9 /* swiftgen.yml */,
 				75BF791724AA43520071B1C0 /* TestLeoVegas */,
 				75BF792E24AA43530071B1C0 /* TestLeoVegasTests */,
 				75BF791624AA43520071B1C0 /* Products */,
@@ -160,9 +177,11 @@
 		75BF791724AA43520071B1C0 /* TestLeoVegas */ = {
 			isa = PBXGroup;
 			children = (
+				752D74B324AF82DC002C4EA9 /* SwiftGen */,
 				75BF794024AA5C030071B1C0 /* Resources */,
 				75BF793F24AA5BFB0071B1C0 /* Source */,
 				75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */,
+				752D74A824AF7F7C002C4EA9 /* Localized.strings */,
 				75BF795424AA62BB0071B1C0 /* Main.storyboard */,
 				75BF792624AA43530071B1C0 /* Info.plist */,
 				75BF793A24AA45950071B1C0 /* GoogleService-Info.plist */,
@@ -342,6 +361,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 75BF790C24AA43520071B1C0;
 			productRefGroup = 75BF791624AA43520071B1C0 /* Products */;
@@ -362,7 +382,9 @@
 				75BF793D24AA47570071B1C0 /* Podfile in Resources */,
 				75BF792524AA43530071B1C0 /* LaunchScreen.storyboard in Resources */,
 				75BF793B24AA45950071B1C0 /* GoogleService-Info.plist in Resources */,
+				752D74AF24AF8093002C4EA9 /* swiftgen.yml in Resources */,
 				75BF795524AA62BB0071B1C0 /* Main.storyboard in Resources */,
+				752D74AA24AF7F7C002C4EA9 /* Localized.strings in Resources */,
 				75BF792224AA43530071B1C0 /* Assets.xcassets in Resources */,
 				75BF794E24AA5F090071B1C0 /* CalculatorMainViewController.xib in Resources */,
 			);
@@ -467,6 +489,7 @@
 				75144E3C24AF47B7004ED6A3 /* ViewController+Alert.swift in Sources */,
 				75BF795024AA5F4A0071B1C0 /* CalculatorCoordinator.swift in Sources */,
 				75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */,
+				752D74B524AF82FA002C4EA9 /* L10n.generated.swift in Sources */,
 				75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */,
 				75BF794724AA5E8A0071B1C0 /* AppCoordinator.swift in Sources */,
 				7520553224AE55B700A3983F /* CalculatorFeatureToggle.swift in Sources */,
@@ -499,10 +522,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		752D74A824AF7F7C002C4EA9 /* Localized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				752D74A924AF7F7C002C4EA9 /* Base */,
+				752D74AC24AF7FA8002C4EA9 /* es */,
+			);
+			name = Localized.strings;
+			sourceTree = "<group>";
+		};
 		75BF792324AA43530071B1C0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				75BF792424AA43530071B1C0 /* Base */,
+				752D74AB24AF7FA7002C4EA9 /* es */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -514,6 +547,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -574,6 +608,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";

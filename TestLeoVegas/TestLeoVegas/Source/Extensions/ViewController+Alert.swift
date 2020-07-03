@@ -17,6 +17,6 @@ extension UIViewController {
     }
 
     public func showErrorAlert(message: String) {
-        showOneButtonAlert(title: "Error", message: message, buttonTitle: "Okay", buttonStyle: .default)  //TODO: Localize
+        showOneButtonAlert(title: L10n.Alert.Error.title, message: message, buttonTitle: L10n.Alert.Error.Button.title, buttonStyle: .default)
     }
 }
