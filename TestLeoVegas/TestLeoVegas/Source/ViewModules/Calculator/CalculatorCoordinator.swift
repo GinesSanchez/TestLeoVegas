@@ -9,7 +9,9 @@
 import UIKit
 import Firebase
 
-protocol CalculatorCoordinatorType: Coordinating { }
+protocol CalculatorCoordinatorType: Coordinating {
+    var calculatorMainViewController: CalculatorMainViewController? { get }
+}
 
 final class CalculatorCoordinator: CalculatorCoordinatorType {
 
@@ -17,7 +19,7 @@ final class CalculatorCoordinator: CalculatorCoordinatorType {
     let viewModuleFactory: ViewModuleFactoryType
     let firebaseDataBase: Firestore
 
-    private var calculatorMainViewController: CalculatorMainViewController?
+    var calculatorMainViewController: CalculatorMainViewController?
 
     init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType, firebaseDataBase: Firestore) {
         self.navigationController = navigationController

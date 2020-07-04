@@ -53,7 +53,7 @@ protocol CalculatorMainViewModelDelegate: class {
 protocol CalculatorMainViewModelType {
     var delegate: CalculatorMainViewModelDelegate? { get }
     var calculatorManager: CalculatorManagerType { get }
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType)
+    init(delegate: CalculatorMainViewModelDelegate?, calculatorManager: CalculatorManagerType)
 }
 
 final class CalculatorMainViewModel: CalculatorMainViewModelType {
@@ -66,19 +66,19 @@ final class CalculatorMainViewModel: CalculatorMainViewModelType {
 
     private var state: CalculatorViewModelState
 
-    private var event: CalculatorViewModelEvent {
+    var event: CalculatorViewModelEvent {
         didSet {
             updateState(state, withEvent: event)
         }
     }
 
-    private var currentScreenText: String {
+    var currentScreenText: String {
         didSet {
             delegate?.viewModel(self, updateScreenText: currentScreenText, operation: currentOperation)
         }
     }
 
-    init(delegate: CalculatorMainViewModelDelegate, calculatorManager: CalculatorManagerType) {
+    init(delegate: CalculatorMainViewModelDelegate?, calculatorManager: CalculatorManagerType) {
         self.delegate = delegate
         self.calculatorManager = calculatorManager
 

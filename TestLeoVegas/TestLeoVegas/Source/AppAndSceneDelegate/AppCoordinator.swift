@@ -9,14 +9,16 @@
 import UIKit
 import Firebase
 
-protocol AppCoordinatorType: Coordinating { }
+protocol AppCoordinatorType: Coordinating {
+    var calculatorCoordinator: CalculatorCoordinatorType? { get }
+}
 
 final class AppCoordinator: AppCoordinatorType {
     let navigationController: UINavigationController
     let viewModuleFactory: ViewModuleFactoryType
     let firebaseDataBase: Firestore
 
-    private var calculatorCoordinator: CalculatorCoordinatorType?
+    var calculatorCoordinator: CalculatorCoordinatorType?
 
 
     init(navigationController: UINavigationController, viewModuleFactory: ViewModuleFactoryType, firebaseDataBase: Firestore) {
@@ -33,5 +35,6 @@ final class AppCoordinator: AppCoordinatorType {
     }
 
     func stop() {
+        calculatorCoordinator = nil
     }
 }
