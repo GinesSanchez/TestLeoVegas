@@ -62,7 +62,6 @@ private extension SceneDelegate {
     func configureFirebase() {
         FirebaseApp.configure()
 
-        //TODO: Check it. It doesn't work!
         let title = "configureFrameworks-called"
         Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
             AnalyticsParameterItemID: "id-\(title)",
