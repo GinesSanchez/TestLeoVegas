@@ -13,6 +13,7 @@
 		7515FCDD24B1F88A009B46E3 /* CalculatorFeatureToggle in Frameworks */ = {isa = PBXBuildFile; productRef = 7515FCDC24B1F88A009B46E3 /* CalculatorFeatureToggle */; };
 		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
 		7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520552B24AE249200A3983F /* CalculatorManager.swift */; };
+		7529953C24B24EC000C9A326 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7529953B24B24EC000C9A326 /* README.md */; };
 		752D74AA24AF7F7C002C4EA9 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752D74A824AF7F7C002C4EA9 /* Localized.strings */; };
 		752D74AF24AF8093002C4EA9 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 752D74AE24AF8093002C4EA9 /* swiftgen.yml */; };
 		752D74B524AF82FA002C4EA9 /* L10n.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752D74B424AF82FA002C4EA9 /* L10n.generated.swift */; };
@@ -60,6 +61,7 @@
 		75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
 		7520552B24AE249200A3983F /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
+		7529953B24B24EC000C9A326 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		752D74A924AF7F7C002C4EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
 		752D74AB24AF7FA7002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		752D74AC24AF7FA8002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		75BF790C24AA43520071B1C0 = {
 			isa = PBXGroup;
 			children = (
+				7529953B24B24EC000C9A326 /* README.md */,
 				75BF793C24AA47570071B1C0 /* Podfile */,
 				752D74AE24AF8093002C4EA9 /* swiftgen.yml */,
 				75BF791724AA43520071B1C0 /* TestLeoVegas */,
@@ -469,6 +472,7 @@
 			files = (
 				752D74B724AF8C67002C4EA9 /* Colors.xcassets in Resources */,
 				75BF793D24AA47570071B1C0 /* Podfile in Resources */,
+				7529953C24B24EC000C9A326 /* README.md in Resources */,
 				75BF792524AA43530071B1C0 /* LaunchScreen.storyboard in Resources */,
 				75BF793B24AA45950071B1C0 /* GoogleService-Info.plist in Resources */,
 				752D74AF24AF8093002C4EA9 /* swiftgen.yml in Resources */,
