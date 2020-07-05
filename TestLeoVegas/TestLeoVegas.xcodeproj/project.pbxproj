@@ -3,16 +3,16 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		55246A63B946FE00613B9ED8 /* Pods_TestLeoVegasTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3F0AFC44F264B7C8C5367B2 /* Pods_TestLeoVegasTests.framework */; };
 		75144E3924AF3FB0004ED6A3 /* InternetConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75144E3824AF3FB0004ED6A3 /* InternetConnectionManager.swift */; };
 		75144E3C24AF47B7004ED6A3 /* ViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */; };
+		7515FCDD24B1F88A009B46E3 /* CalculatorFeatureToggle in Frameworks */ = {isa = PBXBuildFile; productRef = 7515FCDC24B1F88A009B46E3 /* CalculatorFeatureToggle */; };
 		751C1CBB24ACD5690023FB6F /* CalculatorMainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */; };
 		7520552C24AE249200A3983F /* CalculatorManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520552B24AE249200A3983F /* CalculatorManager.swift */; };
-		7520553224AE55B700A3983F /* CalculatorFeatureToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */; };
 		752D74AA24AF7F7C002C4EA9 /* Localized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 752D74A824AF7F7C002C4EA9 /* Localized.strings */; };
 		752D74AF24AF8093002C4EA9 /* swiftgen.yml in Resources */ = {isa = PBXBuildFile; fileRef = 752D74AE24AF8093002C4EA9 /* swiftgen.yml */; };
 		752D74B524AF82FA002C4EA9 /* L10n.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752D74B424AF82FA002C4EA9 /* L10n.generated.swift */; };
@@ -21,7 +21,6 @@
 		752D74BB24AF9028002C4EA9 /* CalculatorAllClearButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752D74BA24AF9028002C4EA9 /* CalculatorAllClearButton.swift */; };
 		752D74BD24AF90A8002C4EA9 /* CalculatorOperationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752D74BC24AF90A8002C4EA9 /* CalculatorOperationButton.swift */; };
 		753D42CB24AB56A10046FA9F /* CalculatorNumberButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753D42CA24AB56A10046FA9F /* CalculatorNumberButton.swift */; };
-		7540F2ED24B0CB5700C7F667 /* CalculatorFeatureToggleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540F2EC24B0CB5700C7F667 /* CalculatorFeatureToggleTests.swift */; };
 		7540F2EF24B0D25500C7F667 /* CalculatorManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7540F2EE24B0D25500C7F667 /* CalculatorManagerTests.swift */; };
 		7598D2927F32D5307B8C75B7 /* Pods_TestLeoVegas.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB95EA2CCA7D1F7442247FD3 /* Pods_TestLeoVegas.framework */; };
 		75BF791924AA43520071B1C0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75BF791824AA43520071B1C0 /* AppDelegate.swift */; };
@@ -61,7 +60,6 @@
 		75144E3B24AF47B7004ED6A3 /* ViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Alert.swift"; sourceTree = "<group>"; };
 		751C1CBA24ACD5690023FB6F /* CalculatorMainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMainViewModel.swift; sourceTree = "<group>"; };
 		7520552B24AE249200A3983F /* CalculatorManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManager.swift; sourceTree = "<group>"; };
-		7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorFeatureToggle.swift; sourceTree = "<group>"; };
 		752D74A924AF7F7C002C4EA9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localized.strings; sourceTree = "<group>"; };
 		752D74AB24AF7FA7002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		752D74AC24AF7FA8002C4EA9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localized.strings; sourceTree = "<group>"; };
@@ -72,7 +70,6 @@
 		752D74BA24AF9028002C4EA9 /* CalculatorAllClearButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorAllClearButton.swift; sourceTree = "<group>"; };
 		752D74BC24AF90A8002C4EA9 /* CalculatorOperationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorOperationButton.swift; sourceTree = "<group>"; };
 		753D42CA24AB56A10046FA9F /* CalculatorNumberButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorNumberButton.swift; sourceTree = "<group>"; };
-		7540F2EC24B0CB5700C7F667 /* CalculatorFeatureToggleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorFeatureToggleTests.swift; sourceTree = "<group>"; };
 		7540F2EE24B0D25500C7F667 /* CalculatorManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorManagerTests.swift; sourceTree = "<group>"; };
 		75BF791524AA43520071B1C0 /* TestLeoVegas.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TestLeoVegas.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		75BF791824AA43520071B1C0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7598D2927F32D5307B8C75B7 /* Pods_TestLeoVegas.framework in Frameworks */,
+				7515FCDD24B1F88A009B46E3 /* CalculatorFeatureToggle in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,18 +148,9 @@
 		7520552A24AE248000A3983F /* CalculatorManager */ = {
 			isa = PBXGroup;
 			children = (
-				7520553024AE55A400A3983F /* Models */,
 				7520552B24AE249200A3983F /* CalculatorManager.swift */,
 			);
 			path = CalculatorManager;
-			sourceTree = "<group>";
-		};
-		7520553024AE55A400A3983F /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7520553124AE55B700A3983F /* CalculatorFeatureToggle.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		752D74B324AF82DC002C4EA9 /* SwiftGen */ = {
@@ -194,18 +183,9 @@
 		7540F2EA24B0CB2C00C7F667 /* CalculatorManager */ = {
 			isa = PBXGroup;
 			children = (
-				7540F2EB24B0CB3600C7F667 /* Models */,
 				7540F2EE24B0D25500C7F667 /* CalculatorManagerTests.swift */,
 			);
 			path = CalculatorManager;
-			sourceTree = "<group>";
-		};
-		7540F2EB24B0CB3600C7F667 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				7540F2EC24B0CB5700C7F667 /* CalculatorFeatureToggleTests.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		75BF790C24AA43520071B1C0 = {
@@ -414,6 +394,9 @@
 			dependencies = (
 			);
 			name = TestLeoVegas;
+			packageProductDependencies = (
+				7515FCDC24B1F88A009B46E3 /* CalculatorFeatureToggle */,
+			);
 			productName = TestLeoVegas;
 			productReference = 75BF791524AA43520071B1C0 /* TestLeoVegas.app */;
 			productType = "com.apple.product-type.application";
@@ -466,6 +449,9 @@
 				es,
 			);
 			mainGroup = 75BF790C24AA43520071B1C0;
+			packageReferences = (
+				7515FCDB24B1F88A009B46E3 /* XCRemoteSwiftPackageReference "CalculatorFeatureToggle" */,
+			);
 			productRefGroup = 75BF791624AA43520071B1C0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -595,7 +581,6 @@
 				752D74B524AF82FA002C4EA9 /* L10n.generated.swift in Sources */,
 				75BF795324AA5F690071B1C0 /* ViewModuleFactory.swift in Sources */,
 				75BF794724AA5E8A0071B1C0 /* AppCoordinator.swift in Sources */,
-				7520553224AE55B700A3983F /* CalculatorFeatureToggle.swift in Sources */,
 				75BF794524AA5E620071B1C0 /* Coordinating.swift in Sources */,
 				752D74B924AF8D07002C4EA9 /* Colors.generated.swift in Sources */,
 				75144E3924AF3FB0004ED6A3 /* InternetConnectionManager.swift in Sources */,
@@ -618,7 +603,6 @@
 				75E82E1224B0F009000308B7 /* CalculatorViewModelTests.swift in Sources */,
 				75E82E0824B0E08A000308B7 /* AppCoordinatorTests.swift in Sources */,
 				7540F2EF24B0D25500C7F667 /* CalculatorManagerTests.swift in Sources */,
-				7540F2ED24B0CB5700C7F667 /* CalculatorFeatureToggleTests.swift in Sources */,
 				75BF793024AA43530071B1C0 /* TestLeoVegasTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -886,6 +870,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7515FCDB24B1F88A009B46E3 /* XCRemoteSwiftPackageReference "CalculatorFeatureToggle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/GinesSanchez/CalculatorFeatureToggle.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7515FCDC24B1F88A009B46E3 /* CalculatorFeatureToggle */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7515FCDB24B1F88A009B46E3 /* XCRemoteSwiftPackageReference "CalculatorFeatureToggle" */;
+			productName = CalculatorFeatureToggle;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 75BF790D24AA43520071B1C0 /* Project object */;
 }

@@ -8,6 +8,7 @@
 
 import Foundation
 import Firebase
+import CalculatorFeatureToggle
 
 enum CalculatorManagerError: Error {
     case noInternetConnection

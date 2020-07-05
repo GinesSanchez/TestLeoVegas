@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CalculatorFeatureToggle
 
 enum Operation {
     case bitCoinToDollar

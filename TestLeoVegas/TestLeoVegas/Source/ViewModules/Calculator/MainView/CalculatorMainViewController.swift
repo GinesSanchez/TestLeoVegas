@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CalculatorFeatureToggle
 
 protocol CalculatorMainViewControllerDelegate: class {
     func viewDidLoad()
